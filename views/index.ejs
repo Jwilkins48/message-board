@@ -7,20 +7,22 @@
 </head>
 
 <body>
-  <h1><%= title %></h1>
-  <p>Welcome to my <%= title %></p>
+  <div class="contentContainer">
+    <h1><%= title %></h1>
 
-  <% for(let i=0; i < messages.length; i++){%>
-  <li>
-    <span><%= messages[i].text %></span>
-    <span><%= messages[i].user %></span>
-    <span><%= messages[i].added %></span>
-  </li>
-  <% } %>
+    <div class="messageContainer">
+      <% for(let i=0; i < messages.length; i++){%>
+      <div class="message">
+        <span> <%= messages[i].text %> </span>
+        <span> <%= messages[i].user %> </span>
+        <span> <%= messages[i].added %> </span>
+      </div>
+      <% } %>
+    </div>
+    <!-- Route to new form page -->
+    <a href="/new"><button class="addNewMsgBtn">new message</button></a>
 
-  <!-- Route to new form page -->
-  <a class="addNewMsgBtn" href="/new"><button>new message</button></a>
-
+  </div>
 </body>
 
 </html>

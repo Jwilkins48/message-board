@@ -1,8 +1,65 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/spaceBckrnd.jpg');
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
 }
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #414f9e93;
+  color: #d7d9e6;
+  width: 900px;
+  margin: auto;
+  min-height: 100vh;
+  height: auto;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.messageContainer {
+  border-top: 1px solid #d7d9e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+}
+
+.message {
+  border-bottom: 1px solid #d7d9e6;
+  height: 8rem;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.addNewMsgBtn{
+  margin-top: 20px;
+  padding: 9px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color ease-in-out .3s;
+}
+.addNewMsgBtn:hover{
+  background-color: #98b1f3;
+  transform: scale(102%);
+}
+.addNewMsgBtn:focus,
+.addNewMsgBtn:active {
+  transition: none;
+}
+   
