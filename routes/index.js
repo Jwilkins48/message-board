@@ -4,12 +4,12 @@ var router = express.Router();
 const messages = [{
     text: 'Hello',
     user: 'Amy',
-    added: new Date()
+    added: new Date().toLocaleDateString(),
   },
   {
     text: 'Hi',
     user: 'Charles',
-    added: new Date()
+    added: new Date().toLocaleDateString(),
   }
 ]
 
@@ -31,7 +31,7 @@ router.post('/new', (req, res, next) => {
   messages.push({
     text: req.body.userMessage,
     user: req.body.userName,
-    added: new Date()
+    added: new Date().toLocaleDateString(),
   });
   res.redirect('/');
 })
